@@ -1,0 +1,509 @@
+/* Tip, copy paste from 13c.01.01 & 13c.01.02 to get fonts and colors up and running ... */
+
+@import url("https://fonts.googleapis.com/css2?family=Fredoka+One&family=Raleway:wght@400;800&display=swap");
+
+:root {
+  --color-primary1: #f8f8f8;
+  --color-primary2: #ebebeb;
+  --color-primary3: #b6b1ad;
+  --color-secondary1: #434348;
+  --color-secondary2: #292929;
+  --color-secondary3: #000000;
+  --color-accent: hsl(192, 77%, 38%);
+
+  --display-font: "Fredoka One", cursive;
+  --main-font: "Raleway", sans-serif;
+
+  --size-h4: 1.333rem;
+  --size-h3: 1.776889rem;
+  --size-h2: 2.368593037rem;
+  --size-h1: 3.1573345183rem;
+}
+
+* {
+  list-style: none;
+  text-decoration: none;
+  padding: 0;
+  margin: 0;
+  color: var(--color-secondary3);
+}
+
+hr {
+  border-left: 1px solid var(--color-secondary3);
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px;
+}
+
+nav ul {
+  display: flex;
+  gap: 1vw;
+}
+
+nav a {
+  text-transform: uppercase;
+}
+
+h1,
+h2,
+h3,
+#logo {
+  font-family: var(--display-font);
+  color: var(--color-secondary3);
+}
+
+#logo {
+  color: var(--color-accent);
+}
+
+p,
+a,
+li {
+  font-family: var(--main-font);
+}
+
+section {
+  padding-left: 5vw;
+  padding-right: 5vw;
+}
+
+button {
+  border: 0;
+  background-color: var(--color-accent);
+  color: var(--color-primary1);
+  border-radius: 10px;
+  padding: 10px 7px 10px 7px;
+  cursor: pointer;
+}
+
+h1 {
+  font-size: var(--size-h1);
+  padding-bottom: 3vh;
+}
+h2 {
+  font-size: var(--size-h2);
+  padding-bottom: 2vh;
+}
+h3 {
+  font-size: var(--size-h3);
+  color: var(--color-secondary2);
+  padding-bottom: 1vh;
+}
+
+header {
+  background-color: var(--color-accent);
+  padding: 5vh;
+  padding-bottom: 15vh;
+  box-shadow: 0px 15px 30px -5px var(--color-secondary3);
+  border-radius: 0 0 10px 10px;
+  margin-bottom: 7vh;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 2vw;
+}
+
+.header_text {
+  color: var(--color-primary2);
+  width: 70ch;
+}
+
+.secondary {
+  background-color: var(--color-primary1);
+  color: var(--color-accent);
+  margin-top: 3vh;
+}
+
+button:hover {
+  transform: scale(1.2);
+}
+
+.header_graphics {
+  background-image: url(img/tech.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 400px;
+  height: 300px;
+  box-shadow: 0px 15px 30px -5px var(--color-secondary3);
+}
+
+#advantages {
+  padding-top: 10vh;
+}
+
+.advantages_cards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 2vw;
+}
+
+.advantages_card {
+  width: 380px;
+  height: 450px;
+  background-color: var(--color-primary1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 7px;
+  /* border: solid 1px var(--color-accent); */
+  box-shadow: 16px 15px 29px -5px hsl(192, 77%, 38%, 0.6);
+  padding: 2vh;
+}
+
+.advantages_card_graphics {
+  background-image: url(img/tablet.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 380px;
+  height: 300px;
+}
+
+#product h3 {
+  color: var(--color-accent);
+}
+
+#product {
+  padding-top: 20vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.product_graphics {
+  margin-top: 5vh;
+  background-image: url(img/people.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 700px;
+  height: 300px;
+}
+
+.product_text {
+  padding-top: 10vh;
+  display: grid;
+  grid-template-columns: 2fr 1fr 2fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  max-width: 100ch;
+}
+
+.product_text :nth-child(1) {
+  grid-column: 1;
+}
+
+.product_text :nth-child(2) {
+  grid-column: 3;
+  grid-row: 2;
+}
+
+.product_text :nth-child(3) {
+  grid-row: 3;
+}
+.product_text :nth-child(4) {
+  grid-row: 4;
+  grid-column: 3;
+}
+
+#highlight {
+  margin-top: 7vh;
+  background-color: var(--color-secondary2);
+  padding: 5vw;
+  border-top: solid 10px var(--color-accent);
+}
+
+#highlight h2 {
+  color: var(--color-accent);
+  padding-bottom: 5vh;
+}
+
+.highlight_small_cards {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.highlight_small_cards div {
+  width: 15vw;
+  height: 15vh;
+  background-color: var(--color-primary2);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 7px;
+  box-shadow: 16px 15px 29px -5px hsl(192, 77%, 38%, 0.6);
+  padding: 2vh;
+}
+
+#highlight h3 {
+  color: var(--color-secondary2);
+}
+
+#highlight > button:nth-child(3) {
+  margin-top: 7vh;
+}
+
+.highlight_small_cards > div:nth-child(1) > p:nth-child(2),
+.highlight_small_cards > div:nth-child(2) > p:nth-child(2) {
+  color: var(--color-secondary2);
+}
+
+#team {
+  padding-top: 8vh;
+  background-color: var(--color-primary2);
+  padding-bottom: 13vh;
+}
+
+.team-wrap {
+  padding-top: 6vh;
+  display: flex;
+  flex-direction: column;
+  gap: 15vh;
+}
+
+#woman {
+  background-image: url(img/woman.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-y: -10vh;
+  width: 15vw;
+  min-width: 200px;
+  min-height: 350px;
+  box-shadow: 16px 15px 29px -5px hsl(192, 77%, 38%, 0.6);
+  border-radius: 10px;
+}
+
+#man {
+  background-image: url(img/man.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 15vw;
+  min-width: 200px;
+  min-height: 350px;
+  box-shadow: 16px 15px 29px -5px hsl(192, 77%, 38%, 0.6);
+  border-radius: 10px;
+}
+
+.team-wrap article {
+  display: flex;
+  gap: 2vw;
+  justify-content: center;
+}
+
+.team_text a {
+  color: var(--color-accent);
+}
+
+#contact {
+  padding-top: 8vh;
+  display: flex;
+  justify-content: center;
+}
+
+#contact_form {
+  background-color: var(--color-primary2);
+  border-radius: 20px;
+  box-sizing: border-box;
+  height: fit-content;
+  padding: 20px;
+  width: 500px;
+  box-shadow: 16px 15px 29px -5px hsl(192, 77%, 38%, 0.6);
+}
+
+.form_group {
+  height: 50px;
+  position: relative;
+  width: 100%;
+}
+
+.ic1 {
+  margin-top: 40px;
+}
+
+.ic2 {
+  margin-top: 30px;
+}
+
+#message {
+  min-height: 5vh;
+}
+
+.input {
+  background-color: var(--color-primary3);
+  border-radius: 12px;
+  border: 0;
+  box-sizing: border-box;
+  color: var(--color-primary1);
+  font-size: 18px;
+  height: 100%;
+  outline: 0;
+  padding: 4px 20px 0;
+  width: 100%;
+}
+
+.cut {
+  background-color: var(--color-primary2);
+  border-radius: 10px;
+  height: 20px;
+  left: 20px;
+  position: absolute;
+  top: -20px;
+  transform: translateY(0);
+  transition: transform 200ms;
+  width: 76px;
+}
+
+.cut-short {
+  width: 50px;
+}
+
+.input:focus ~ .cut,
+.input:not(:placeholder-shown) ~ .cut {
+  transform: translateY(8px);
+}
+
+.placeholder {
+  color: var(--color-primary2);
+  font-family: sans-serif;
+  left: 20px;
+  line-height: 14px;
+  pointer-events: none;
+  position: absolute;
+  transform-origin: 0 50%;
+  transition: transform 200ms, color 200ms;
+  top: 20px;
+}
+
+.input:focus ~ .placeholder,
+.input:not(:placeholder-shown) ~ .placeholder {
+  transform: translateY(-30px) translateX(10px) scale(0.75);
+}
+
+.input:not(:placeholder-shown) ~ .placeholder {
+  color: var(--color-primary3);
+}
+
+.input:focus ~ .placeholder {
+  color: var(--color-accent);
+}
+
+.form-group button:active {
+  color: var(--color-secondary3);
+  background-color: var(--color-primary1);
+}
+
+footer {
+  margin-top: 20vh;
+  background-color: var(--color-secondary2);
+  padding: 10vh;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+footer a {
+  color: var(--color-primary1);
+}
+
+footer h2 {
+  color: var(--color-accent);
+}
+
+footer section {
+  padding: 0;
+}
+
+@media only screen and (max-width: 600px) {
+  .advantages_cards,
+  .advantages_card,
+  .highlight_small_cards,
+  .team-wrap article,
+  header,
+  .header_text,
+  .product_text,
+  nav,
+  nav ul {
+    display: block;
+    width: fit-content;
+    height: fit-content;
+  }
+
+  nav {
+    padding: 0;
+  }
+
+  nav,
+  nav li {
+    padding-bottom: 5vh;
+    padding-top: 5vh;
+  }
+
+  nav button {
+    margin-bottom: 5vh;
+    margin-left: 37vw;
+    margin-top: 10vh;
+  }
+
+  #logo {
+    padding-left: 10vw;
+    font-size: var(--size-h3);
+  }
+
+  nav ul {
+    padding-top: 8vh;
+  }
+
+  nav li {
+    padding-left: 5vh;
+  }
+
+  hr {
+    width: 100vw;
+    padding: 0;
+    margin: 0;
+  }
+
+  .advantages_card {
+    margin-bottom: 4vh;
+    box-shadow: none;
+  }
+  .advantages_card_graphics,
+  .product_graphics {
+    height: 20vh;
+    width: 80vw;
+  }
+
+  .header_graphics {
+    height: 35vh;
+    width: 80vw;
+  }
+
+  .product_text article {
+    margin-bottom: 5vh;
+  }
+
+  .header_graphics {
+    margin-top: 4vh;
+  }
+
+  .highlight_small_cards div {
+    display: block;
+    width: 50vw;
+    margin-top: 2vh;
+  }
+
+  #product {
+    padding-top: 3vh;
+  }
+
+  #woman,
+  #man {
+    margin-bottom: 5vh;
+    background-position: 0;
+  }
+}
