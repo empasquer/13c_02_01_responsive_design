@@ -161,10 +161,12 @@
     </section>
     <section id="contact">
       <!-- Contact form section layout -->
-      <form id="contact_form">
+      <!-- Two column layout, name and email a column each, message two columns. Labels should be over input-->
+      <!--* I took some creative liberty with this one, but ill make the real one also -->
+      <!-- <form id="contact_form">
         <h2>Iudicia quod fames?</h2>
         <p>Vel w tibi progressionem exequi tincidunt ullo Modo'd orator depauperatio sapiente convallis.</p>
-        <!-- Two column layout, name and email a column each, message two columns. Labels should be over input-->
+
         <div class="form_group ic1">
           <input id="fullname" class="input" type="text" name="Name" placeholder=" " required />
           <div class="cut"></div>
@@ -184,6 +186,30 @@
         </div>
 
         <div class="form_group ic2">
+          <button type="submit">Send Message</button>
+        </div>
+      </form> -->
+      <h2>Iudicia quod fames?</h2>
+      <p>Vel w tibi progressionem exequi tincidunt ullo Modo'd orator depauperatio sapiente convallis.</p>
+
+      <form id="contact_form">
+        <!-- Two column layout, name and email a column each, message two columns. Labels should be over input-->
+        <div class="form_group">
+          <label for="name">Full name</label>
+          <input type="text" id="name" name="Name" required />
+        </div>
+
+        <div class="form_group">
+          <label for="email">Email address</label>
+          <input type="email" id="email" name="Email" required />
+        </div>
+
+        <div class="form_group">
+          <label for="message">Message</label>
+          <textarea id="message" name="Message" required></textarea>
+        </div>
+
+        <div class="form_group">
           <button type="submit">Send Message</button>
         </div>
       </form>

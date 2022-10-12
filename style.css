@@ -63,7 +63,10 @@ h3,
 
 p,
 a,
-li {
+li,
+textarea,
+input,
+label {
   font-family: var(--main-font);
 }
 
@@ -141,6 +144,7 @@ button:hover {
   flex-direction: row;
   flex-wrap: wrap;
   gap: 2vw;
+  justify-content: space-evenly;
 }
 
 .advantages_card {
@@ -299,7 +303,7 @@ button:hover {
   color: var(--color-accent);
 }
 
-#contact {
+/* #contact {
   padding-top: 8vh;
   display: flex;
   justify-content: center;
@@ -395,6 +399,56 @@ button:hover {
 .form-group button:active {
   color: var(--color-secondary3);
   background-color: var(--color-primary1);
+} */
+
+#contact {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding-top: 10vh;
+  padding-left: 30vw;
+  padding-right: 30vw;
+}
+
+#contact p {
+  padding-bottom: 3vh;
+}
+
+#contact_form {
+  background-color: var(--color-primary2);
+  padding: 3vh;
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 3fr 1fr;
+  width: 30vw;
+  min-width: fit-content;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 16px 15px 29px -5px hsl(192, 77%, 38%, 0.6);
+}
+
+#contact_form :nth-child(1) {
+  padding-right: 4vw;
+}
+
+.form_group:nth-child(3) {
+  grid-column: 1 / 3;
+  grid-row: 2;
+}
+
+.form_group:nth-child(3) textarea {
+  width: 100%;
+  height: 70%;
+}
+
+.form_group :nth-child(4) {
+  grid-row: 3;
+  grid-column: 1;
+}
+
+input {
+  width: 100%;
 }
 
 footer {
@@ -419,6 +473,10 @@ footer section {
 }
 
 @media only screen and (max-width: 600px) {
+  html {
+    overflow-x: hidden;
+  }
+
   .advantages_cards,
   .advantages_card,
   .highlight_small_cards,
@@ -431,6 +489,15 @@ footer section {
     display: block;
     width: fit-content;
     height: fit-content;
+  }
+
+  #contact {
+    padding-left: 10vw;
+    padding-right: 10vw;
+  }
+
+  #contact_form :nth-child(1) {
+    padding-right: 7vw;
   }
 
   nav {
